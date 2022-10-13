@@ -1,5 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Footer from '../components/Footer';
+
+//Images
+import Diseño from '../images/diseño.png';
 
 const DiseñoPage = () => {
   return (
@@ -31,13 +35,14 @@ const DiseñoPage = () => {
               clientes. Tener sitios web o apps funcionales pero con un estilo estético para representar su marca. </p>
             <h1 className="major">Proyecto</h1>
             <h3>Diseño de Identidad visual - Doodle café</h3>
-            <span className="image fit"><img src="../images/diseño.png" alt="diseño-grafico" /></span>
-            <h4><NavLink to="https://www.behance.net/gallery/124203257/Doodle-caf/modules/706939381" target="_blank" className="button primary">¡Échale un vistazo al proyecto!</NavLink></h4>
+            <span className="image fit"><img src={Diseño} alt="diseño-grafico" /></span>
+            <h4><a href="https://www.behance.net/gallery/124203257/Doodle-caf/modules/706939381" target="_blank" className="button primary">¡Échale un vistazo al proyecto!</a></h4>
             <br />
             <NavLink to="/" className="button">Inicio</NavLink>
           </div>
         </section>
       </div>
+    <Footer />
     </div>
   );
 };

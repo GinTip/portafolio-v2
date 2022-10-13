@@ -1,13 +1,39 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import NavBar from '../components/NavBar';
+
+// Font awesome
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBehance, faGithub, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import { faCode, faCog, faPalette, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser } from '@fortawesome/free-regular-svg-icons';
+
+// Images
+import PortadaFront from '../images/portada-frontend.png';
+import PortadaUiux from '../images/portada-diseñouiux.png';
+import PortadaDiseño from '../images/portada-diseño.png';
+
 
 class HomePage extends React.Component {
   render() {
     return (
       <>
-        <NavBar />
-        <div>
+        <section id="sidebar">
+          <div className="inner">
+            <nav>
+              <ul>
+                <li><a href="#intro">¡Hola!</a></li>
+                <li><a href="#one">Mi trabajo</a></li>
+                <li><a href="#two">Habilidades</a></li>
+                <li><a href="#three">Contacto</a></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <body className="is-preload" >
+          {/* <section>
+            <NavBar />
+          </section> */}
+
           {/* Wrapper */}
           <div id="wrapper">
             {/* Intro */}
@@ -17,14 +43,14 @@ class HomePage extends React.Component {
                 <p>Mi nombre es Gina y soy diseñadora gráfica, <br />
                   desarrolladora front-end y diseñadora UX/UI.</p>
                 <ul className="actions">
-                  <li><NavLink to="#one" className="button scrolly">Mi trabajo</NavLink></li>
+                  <li><a href="#one" className="button scrolly">Mi trabajo</a></li>
                 </ul>
               </div>
             </section>
             {/* One */}
             <section id="one" className="wrapper style2 spotlights">
               <section>
-                <NavLink to="/frontend" className="image"><img src="./images/portada-frontend.png" alt="frontend" data-position="center center" /></NavLink>
+                <NavLink to="/frontend" className="image"><img src={PortadaFront} alt="frontend" data-position="center center" /></NavLink>
                 <div className="content">
                   <div className="inner">
                     <h2>Desarrollo front-end</h2>
@@ -36,7 +62,7 @@ class HomePage extends React.Component {
                 </div>
               </section>
               <section>
-                <NavLink to="/uxui" className="image"><img src="./images/portada-diseñouiux.png" alt="uxui" data-position="top center" /></NavLink>
+                <NavLink to="/uxui" className="image"><img src={PortadaUiux} alt="uxui" data-position="top center" /></NavLink>
                 <div className="content">
                   <div className="inner">
                     <h2>Diseño UX/UI</h2>
@@ -48,7 +74,7 @@ class HomePage extends React.Component {
                 </div>
               </section>
               <section>
-                <NavLink to="/diseño" className="image"><img src="./images/portada-diseño.png" alt="diseño" data-position="25% 25%" /></NavLink>
+                <NavLink to="/diseño" className="image"><img src={PortadaDiseño} alt="diseño" data-position="25% 25%" /></NavLink>
                 <div className="content">
                   <div className="inner">
                     <h2>Diseño gráfico</h2>
@@ -66,7 +92,7 @@ class HomePage extends React.Component {
                 <h2>Habilidades</h2>
                 <div className="features">
                   <section>
-                    <span className="icon solid major fa-code" />
+                  <FontAwesomeIcon icon={faCode} className='icon' style={{color:'#b74e91z', fontSize:'30px'}}/>
                     <h3>Programación</h3>
                     <ul>
                       <li>HTML5</li>
@@ -78,7 +104,7 @@ class HomePage extends React.Component {
                     </ul>
                   </section>
                   <section>
-                    <span className="icon solid major fa-user" />
+                  <FontAwesomeIcon icon={faCircleUser} className='icon' style={{color:'#b74e91z', fontSize:'30px'}}/>
                     <h3>UX/UI</h3>
                     <ul>
                       <li>Figma</li>
@@ -91,7 +117,7 @@ class HomePage extends React.Component {
                     </ul>
                   </section>
                   <section>
-                    <span className="icon solid major fa-palette" />
+                  <FontAwesomeIcon icon={faPalette} className='icon' style={{color:'#b74e91z', fontSize:'30px'}}/>
                     <h3>Diseño</h3>
                     <ul>
                       <li>Composición</li>
@@ -102,7 +128,7 @@ class HomePage extends React.Component {
                     </ul>
                   </section>
                   <section>
-                    <span className="icon solid major fa-cog" />
+                  <FontAwesomeIcon icon={faCog} className='icon' style={{color:'#b74e91z', fontSize:'30px'}}/>
                     <h3>Otras habilidades</h3>
                     <ul>
                       <li>Inglés B2</li>
@@ -132,10 +158,10 @@ class HomePage extends React.Component {
                     <li>
                       <h3>Mis redes</h3>
                       <ul className="icons">
-                        <li><NavLink to="https://github.com/GinTip" className="icon brands fa-github"><span className="label">GitHub</span></NavLink></li>
-                        <li><NavLink to="https://instagram.com/gintipdesign?igshid=YmMyMTA2M2Y=" className="icon brands fa-instagram"><span className="label">Instagram</span></NavLink></li>
-                        <li><NavLink to="https://www.linkedin.com/in/gina-beatriz-tipa-herrera-8660ab181/" className="icon brands fa-linkedin-in"><span className="label">LinkedIn</span></NavLink></li>
-                        <li><NavLink to="https://www.behance.net/ginabetipahe" className="icon brands fa-behance"><span className="label">Behance</span></NavLink></li>
+                        <li><a href="https://github.com/GinTip" className="icon brands fa-github"><FontAwesomeIcon icon={faGithub} /><span className="label">GitHub</span></a></li>
+                        <li><a href="https://instagram.com/gintipdesign?igshid=YmMyMTA2M2Y=" className="icon brands fa-instagram"><FontAwesomeIcon icon={faInstagram} /><span className="label">Instagram</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/gina-beatriz-tipa-herrera-8660ab181/" className="icon brands fa-linkedin-in"><FontAwesomeIcon icon={faLinkedin} /><span className="label">LinkedIn</span></a></li>
+                        <li><a href="https://www.behance.net/ginabetipahe" className="icon brands fa-behance"><FontAwesomeIcon icon={faBehance} /><span className="label">Behance</span></a></li>
                       </ul>
                     </li>
                   </ul>
@@ -143,7 +169,15 @@ class HomePage extends React.Component {
               </div>
             </section>
           </div>
-        </div>
+          {/* Footer */}
+          <footer id="footer" className="wrapper style1-alt">
+            <div className="inner">
+              <ul className="menu">
+                <li>© Gina Herrera. Todos los derechos reservados.</li>
+              </ul></div>
+          </footer>
+
+        </body>
       </>
     )
   }

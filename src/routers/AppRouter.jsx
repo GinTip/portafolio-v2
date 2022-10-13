@@ -26,7 +26,7 @@ const AppRouter = () => {
           <Route path="/uxui" element={<UiuxPage />} />
         </Routes>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 };
