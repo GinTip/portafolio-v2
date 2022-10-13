@@ -5,10 +5,6 @@ import {
   Routes,
 } from "react-router-dom";
 
-
-// Importación de componentes 
-import Footer from '../components/Footer';
-
 // Importacion de "pages"
 import HomePage from '../pages/HomePage';
 import UiuxPage from '../pages/UiuxPage';
@@ -26,7 +22,6 @@ const AppRouter = () => {
           <Route path="/uxui" element={<UiuxPage />} />
         </Routes>
       </div>
-      {/* <Footer /> */}
     </Router>
   );
 };
