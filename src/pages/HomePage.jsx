@@ -15,6 +15,7 @@ import PortadaDiseño from '../images/portada-diseño.png';
 const HomePage = () => {
   return (
     <>
+      <body className="is-preload" >
       <section id="sidebar">
         <div className="inner">
           <nav>
@@ -27,11 +28,6 @@ const HomePage = () => {
           </nav>
         </div>
       </section>
-      <body className="is-preload" >
-        {/* <section>
-          <NavBar />
-        </section> */}
-
         {/* Wrapper */}
         <div id="wrapper">
           {/* Intro */}

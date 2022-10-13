@@ -23,7 +23,7 @@ const FrontendPage = () => {
       </header>
       <>
         {/* Wrapper */}
-        <div>
+        <div id="wrapper">
           {/* Main */}
           <section id="main" className="wrapper">
             <div className="inner">

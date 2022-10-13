@@ -14,8 +14,8 @@ import FrontendPage from '../pages/FrontendPage';
 const AppRouter = () => {
   return (
     <Router>
-      <div className='container mt-5 p-5'>
-        <Routes>
+      <div>
+      <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/diseño" element={<DiseñoPage />} />
           <Route path="/frontend" element={<FrontendPage />} />

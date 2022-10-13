@@ -3366,6 +3366,7 @@ input, select, textarea {
 		background-color: #5e42a6;
 		cursor: default;
 		padding: 1.75em 2em;
+		margin: 0;
 	}
 
 		#header > .title {
